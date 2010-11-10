@@ -1,0 +1,247 @@
+/* CSSTidy 1.3: Wed, 10 Nov 2010 09:32:02 -0700 */
+body {
+font-family:verdana, "trebuchet MS", helvetica, sans-serif;
+color:#949070;
+background-color:#7D7ASE;
+margin:0;
+}
+
+p {
+font-size:small;
+line-height:1em;
+}
+
+h1,h2,h3 {
+font-family:georgia, "Times New Roman," serif;
+}
+
+h2 {
+font-size:medium;
+}
+
+#masthead {
+width:100%;
+border-bottom:1px solid #859acf;
+margin:0 0 3px;
+padding:10px 0 3px;
+}
+
+#masthead img {
+float:left;
+margin:5px 0 0 20px;
+}
+
+#masthead h1 {
+color:#103f59;
+margin:0 0 0 20px;
+padding:30px 0 0;
+}
+
+#masthead h2 {
+color:#000;
+margin:5px 0 20px 50px;
+}
+
+#navigation {
+float:left;
+width:100%;
+border-top:1px solid #859acf;
+margin:0 0 20px;
+padding:8px 0 0;
+}
+
+#navigation ul {
+text-transform:uppercase;
+letter-spacing:.1em;
+font-size:small;
+margin-left:10px;
+padding-left:0;
+padding-top:20px;
+display:inline;
+}
+
+#navigation ul li {
+margin-left:0;
+border-left:1px solid #000;
+list-style:none;
+display:inline;
+padding:3px 15px;
+}
+
+#navigation ul li.first {
+margin-left:0;
+border-left:none;
+list-style:none;
+display:inline;
+color:#000;
+}
+
+a {
+font-weight:700;
+color:#949070;
+text-decoration:none;
+}
+
+a:active: {
+border:1px dashed #949070;
+}
+
+#student-information {
+float:left;
+width:100%;
+margin:0 0 30px;
+}
+
+#student-information img {
+float:left;
+width:150px;
+margin:27px 17px 17px 27px;
+padding:3px;
+}
+
+#student-information img.email {
+line-height:2em;
+height: 21px;
+width: 230px;
+margin:0;
+margin:0;
+}
+
+#student-information dl {
+float:left;
+width:30%;
+color:#949070;
+padding:10px 60px 30px 0;
+}
+
+#student-information dd {
+font-size:small;
+line-height:2em;
+margin:0;
+padding:0;
+}
+
+#student-information dt {
+font-family:georgia, "Times New Roman," serif;
+font-size:medium;
+font-weight:700;
+letter-spacing:1px;
+}
+
+#student-information blockquote {
+float:right;
+width:30%;
+background-color:#e6e2af;
+color:#949070;
+border:1px dashed #000;
+margin:30px 30px 30px 0;
+padding:20px;
+}
+
+#student-information p {
+font-family:georgia, "Times New Roman," serif;
+font-size:medium;
+line-height:2em;
+}
+
+#student-information cite {
+float:right;
+font-family:georgia, "Times New Roman," serif;
+font-size:small;
+}
+
+#bodycontent {
+clear:both;
+margin:20px 30px 0;
+}
+
+#bodycontent dt {
+font-family:georgia, "Times New Roman," serif;
+font-size:medium;
+font-weight:700;
+}
+
+#bodycontent dd {
+font-size:small;
+line-height:2em;
+margin:0;
+padding:10px 0 0;
+}
+
+#education {
+float:left;
+width:100%;
+margin:0 30px;
+}
+
+#education dd {
+font-size:small;
+line-height:1.8em;
+margin:0;
+}
+
+#education dt {
+font-family:georgia, "Times New Roman," serif;
+font-size:medium;
+font-weight:700;
+letter-spacing:1px;
+margin:20px 0 10px;
+}
+
+#professional-experience {
+float:left;
+width:100%;
+margin:0 30px 20px;
+}
+
+#professional-experience dd {
+line-height:1.8em;
+font-size:small;
+margin:10px 0 0;
+}
+
+#professional-experience dt {
+font-family:georgia, "Times New Roman," serif;
+font-size:medium;
+font-weight:700;
+letter-spacing:1px;
+margin:5px 0 0;
+}
+
+#runner {
+clear:both;
+text-align:right;
+border-top:1px solid #949070;
+padding:20px 30px 10px;
+}
+
+#runner ul {
+font-family:georgia, "Times New Roman," serif;
+letter-spacing:.1em;
+font-size:small;
+display:inline;
+}
+
+#runner ul li {
+margin-left:0;
+display:inline;
+list-style:none;
+border-left:1px solid #000;
+padding:3px 15px;
+}
+
+#runner ul li.first {
+margin-left:0;
+border-left:none;
+display:inline;
+color:#949070;
+}
+
+a: link,a:visited,#student-information a:link {
+color:#949070;
+}
+
+a:hover,#student-information a:hover {
+color:#FFF;
+background-color:#949070;
+}
