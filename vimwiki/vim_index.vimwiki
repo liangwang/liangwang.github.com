@@ -1,0 +1,10 @@
+%toc
+= Vim =
+== Tips ==
+To Be Added
+== Plugins ==
+* [[vim_wiki|Wiki]] : Personal wiki in text file.
+* [[vim_latex|LaTeX]] : Writting latex using Vim.
+* [[vim_addon_manager|Addon Managerment]]: Addon manager for vim
+  scripts/plugins/addons/themes/documents, etc.
+* [[vim_snippets|Snippets]] : Automative insert code segments

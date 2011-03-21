@@ -11,6 +11,7 @@
     <link rel="Shortcut Icon" href="i/favicon.ico" type="image/x-icon" />
     <link href="style.css" rel="stylesheet" type="text/css" media="screen"/>
   </head>
+  <script type="text/javascript" src="antispam/email.js"></script>
   <body>
     <div id="masthead">
       <h1>Liang Wang</h1>
@@ -24,7 +25,7 @@
         <li class="first">Home</li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="publications.html">Publications</a></li>
-        <li><a href="vimwiki">Personal Wiki</a></li>
+        <li><a href="vimwiki_html">Personal Wiki</a></li>
       </ul>
     </div><!--end of navigation div-->
 
@@ -34,8 +35,15 @@
         <dt>Graduate Student</dt>
         <dd>School of Engineering, Univ. of Virginia</dd>
         <dd>151 Engineer's Way, P.O. BOX 400740</dd>
-        <dd>Charlottesville, VA, 22904-4740</dd>
-        <dd>liang.wang [at] virginia.edu</dd>
+        <dd>Charlottesville, VA, 22904-4740</dd> 
+        <!-- hide email by http://www.mobilefish.com/services/hideemail/hideemail.php -->
+        <!-- use another alternative to hide email
+        <dd><script language='javascript' type='text/javascript'>
+          document.write("&#108;&#105;&#97;&#110;&#103;&#46;&#119;&#97;&#110;&#103;&#64;&#118;&#105;&#114;&#103;&#105;&#110;&#105;&#97;&#46;&#101;&#100;&#117;");
+        </script></dd> --> 
+
+        <!-- hide email address with antispam/email.js -->
+        <dd class="hideemail">uvaliang wangcs</dd>
       </dl>
     </div><!--end of student-information div-->
 

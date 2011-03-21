@@ -1,0 +1,4 @@
+%toc
+= Vimwiki =
+== Why ==
+There are a lot of tools available for personal knowledge management. However, I choose [http://code.google.com/p/vimwiki Vimwiki] as my current solution due to the power of [http://www.vim.org Vim] and simplicity of plain text file. 
