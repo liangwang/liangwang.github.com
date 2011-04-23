@@ -2,14 +2,34 @@
 %toc
 = Vim =
 == Tips ==
-* Merge PDF files (*nix)
-{{{class="brush: bash"
-gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite \
-   -sOutputFile=merged.pdf f1.pdf f2.pdf ...
-}}}
+TBD
 == Plugins ==
-* [[vim_wiki|Wiki]] : Personal wiki in text file.
-* [[vim_latex|LaTeX]] : Writting latex using Vim.
-* [[vim_addon_manager|Addon Managerment]]: Addon manager for vim
-  scripts/plugins/addons/themes/documents, etc.
-* [[vim_snippets|Snippets]] : Automative insert code segments
+* vim-addon-manager : Addon manager for Vim
+* Zenburn : A 256color theme used in terminal
+* vcscommand : Work with version control systems (e.g. hg)
+* !ManPageView : Type 'K', read manpage within Vim.
+* snipMate : Automation with various code insertions.
+* !OmniCppComplete : Omni-completion for c++
+* vim-latex : A.K.A !LatexSuite
+* The_NERD_tree : File explorer
+* The_NERD_Commenter : Making comment easier and faster
+* bufexplorer.zip : Switching among buffers
+* VHDL_indent_93_syntax : Syntax file for VHDL'93
+* scons : Syntax file
+* indentpython974 : Vim script #974, indent for python
+* python790 : A better python syntax file.
+* Efficient_python_folding : Python folding
+* python30 : ?
+* Pydiction : Python keywords for fast completion.
+* vimwiki : Personal wiki system in text file
+* calendar52 : Calendar
+* LaTeX_Help : Display help information for latex keywords in Vim's help system
+* Latex_Text_Formatter : Format text in latex
+* Align294 : Align text/code
+* !DrawIt : Ascii art tool
+* VOoM_-_Vim_Outliner_of_Markers : Outline mode
+* matchit.zip : ?
+* repeat : ?
+* surround : ?
+* supertab : Completion with Tab
+* taglist : Source code browser

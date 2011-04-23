@@ -1,6 +1,12 @@
 %title LaTeX
 %toc
 = !LaTeX =
+== Tips ==
+* Merge PDF files (*nix)
+{{{class="brush: bash"
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite \
+   -sOutputFile=merged.pdf f1.pdf f2.pdf ...
+}}}
 == Tools ==
 * [[vim_latex|Vim]]
 * [[latex_makefile|Makefile]]
