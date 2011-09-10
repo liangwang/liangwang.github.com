@@ -6,7 +6,7 @@ body {font-family:Verdana,Geneva,sans-serif;
     padding:0; 
     font-size: 100%; 
     line-height: 130%;
-    /*background:transparent url(bg/bg_plant.jpg) no-repeat fixed right 0;*/
+    /*background:transparent url(images/bg/bg_plant.jpg) no-repeat fixed right 0;*/
 }
 
 #wrapper{
@@ -43,11 +43,11 @@ nav ul:after{
 
 /*nav ul{zoom:1;}*/
 nav ul li{list-style-type:none; margin:0 0 0 0px; padding:0; float:left; 
-    background:transparent url(bg/bg_topSearch3.gif) no-repeat scroll -5px 0;
+    background:transparent url(images/bg/bg_topSearch3.gif) no-repeat scroll -5px 0;
     border-left:0px solid #dedede; height:37px;}
 nav ul li.first{background-position:0 0;}
 nav ul li.last{background-position:right 0;}
-/*nav ul li.actived, #main-nav ul li:hover{background-image:url(bg/bg_topSearch3-on.gif);}*/
+/*nav ul li.actived, #main-nav ul li:hover{background-image:url(images/bg/bg_topSearch3-on.gif);}*/
 nav ul li a{text-decoration:none; color:#666; margin:0; height:37px; line-height:35px; padding:0 16px; display:block; text-shadow:2px 2px 6px #999;}
 /*nav ul li.actived a{color:#f60; padding:0 24px; font-weight:bold; text-shadow:2px 2px 6px #FDA972;}*/
 nav ul li.actived a{color:#666; padding:0 24px; font-weight:bold; text-shadow:2px 2px 6px #999;}
@@ -68,7 +68,7 @@ div.toc ul{margin:0; padding:0 0 0 1em; padding:0;}
 div.toc>ul{padding:0;}
 /*div.toc ul ul{*padding:0 0 0 8px;}*/
 div.toc ul ul{padding:0 0 0 8px;}
-div.toc li{list-style-type: none; margin:0; padding:0 0 0 18px; background:transparent url(bg/icons.png) no-repeat scroll 0 -48px; font-size:.9em; line-height:18px; overflow:hidden;}
+div.toc li{list-style-type: none; margin:0; padding:0 0 0 18px; background:transparent url(images/bg/icons.png) no-repeat scroll 0 -48px; font-size:.9em; line-height:18px; overflow:hidden;}
 
 h1, h2, h3, h4, h5, h6 {
     /*font-family:"Trebuchet MS", serif; */
@@ -127,8 +127,8 @@ blockquote{
     border-width:0; border-color:#ccc; border-style:solid;
     border-radius: 8px;
     /*-moz-border-radius:8px; -khtml-border-radius:8px; -webkit-border-radius:8px; border-radius:8px;*/
-    /*background-color:#eee; background-image:url(bg/testy-quote-open.gif),url(bg/testy-quote-close.gif); background-position:left top,right bottom; background-repeat:no-repeat; *background:#eee url(bg/testy-quote-open.gif) no-repeat;}*/
-    background-color:#eee; background-image:url(bg/testy-quote-open.gif),url(bg/testy-quote-close.gif); background-position:left top,right bottom; background-repeat:no-repeat; background:#eee url(bg/testy-quote-open.gif) no-repeat;}
+    /*background-color:#eee; background-image:url(images/bg/testy-quote-open.gif),url(images/bg/testy-quote-close.gif); background-position:left top,right bottom; background-repeat:no-repeat; *background:#eee url(images/bg/testy-quote-open.gif) no-repeat;}*/
+    background-color:#eee; background-image:url(images/bg/testy-quote-open.gif),url(images/bg/testy-quote-close.gif); background-position:left top,right bottom; background-repeat:no-repeat; background:#eee url(images/bg/testy-quote-open.gif) no-repeat;}
 code{
     margin:1px 3px; padding:2px; display:inline-block; background:#f8f8f8 none; border:1px solid #eee;
     font-family:"Courier New";
@@ -156,8 +156,8 @@ del {text-decoration: line-through; color: #777777;}
 a{color:#002BB8; text-decoration:none;}
 a:hover{text-decoration:underline;}
 #wrapper article a[href^="http://"],
-#wrapper article a[href^="https://"]{background:transparent url(bg/icons.png) no-repeat scroll right -16px; padding:0 16px 0 0;}
-#wrapper article a.external{background:transparent url(bg/icons.png) no-repeat scroll right -16px; padding:0 16px 0 0; display:inline-block;}
+#wrapper article a[href^="https://"]{background:transparent url(images/bg/icons.png) no-repeat scroll right -16px; padding:0 16px 0 0;}
+#wrapper article a.external{background:transparent url(images/bg/icons.png) no-repeat scroll right -16px; padding:0 16px 0 0; display:inline-block;}
 #wrapper article a[href^="http://"]:hover,
 #wrapper article a[href^="https://"]:hover{background-position:right -30px;}
 #wrapper article a.external:hover{background-position:right -30px;}
@@ -173,7 +173,7 @@ h4 a[href^="https://"],
 h5 a[href^="https://"],
 h5 a[href^="https://"],
 h6 a[href^="https://"],
-h6 a[href^="https://"]{background:transparent url(bg/popout.png) no-repeat scroll right bottom;}
+h6 a[href^="https://"]{background:transparent url(images/bg/popout.png) no-repeat scroll right bottom;}
 h1 a[href^="http://"]:hover,
 h1 a[href^="https://"]:hover,
 h2 a[href^="http://"]:hover,
@@ -195,7 +195,7 @@ h6 a[href^="https://"]:hover{background-position:right top;}
 footer{border-width:1px 0 0; border-style:solid; border-color:#ccc; color:#999; padding:5px; font-family:Georgia,Times,sans-serif; font-size:small; text-align:right; display:block; margin:0 1em;}
 footer:after{content:"\0020"; display:block; height:0; clear:both;}
 /*footer{zoom:1;}*/
-#back-home{padding-left:18px; float:left; line-height:16px; background:transparent url(bg/icons.png) no-repeat scroll -16px 0;}
+#back-home{padding-left:18px; float:left; line-height:16px; background:transparent url(images/bg/icons.png) no-repeat scroll -16px 0;}
 #back-home:hover{background-position:0 0;}
 footer p{
     margin:0; 
