@@ -1,10 +1,12 @@
 %title Personal Wiki
 %toc
-= Misc Notes =
+= Tech Notes =
 == Tools ==
 * [[vim_index|Vim]]
 * [[latex_index|LaTeX]]
+* [[gnuplot_index|Gnuplot]]
 == Languages ==
 * [[c_index|C]]
 * [[bash_index|BASH Script]]
 * [[sed_index|SED]]
+* [[python_index|Python]]
