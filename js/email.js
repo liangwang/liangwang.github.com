@@ -27,17 +27,17 @@ function change() {
       address = address.replace(begin, '');
       address = address.replace(end, '');
       address = address.replace(space, '.');
-      address += '@vir';
+      address += '@cs.vir';
       address += 'ginia.e';
       address += 'du';
 
+    /*
       var anchor = document.createElement();
       anchor.appendChild(document.createTextNode(address));
       s.removeChild(s.firstChild);
       s.appendChild(anchor);
     }
 
-    /*
        if (name == 'justify' || name == 'expand') {
        var address = s.firstChild.nodeValue;
 
@@ -52,15 +52,15 @@ function change() {
        address = address.replace(space, '.');
        address = address.replace(csend, '');
        }
+    */
 
-    //var anchor = document.createElement('a');
-    var anchor = document.createElement();
+    var anchor = document.createElement('a');
+    //var anchor = document.createElement();
     anchor.appendChild(document.createTextNode(address));
-    //anchor.setAttribute('href', 'mailto:' + address);
+    anchor.setAttribute('href', 'mailto:' + address);
     s.removeChild(s.firstChild);
     s.appendChild(anchor);
     }
-    */
   }
 }
 
