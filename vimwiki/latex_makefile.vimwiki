@@ -1,0 +1,9 @@
+%title LaTeX Makefile
+= !LaTeX-Makefile =
+Chris Monson has developed an amazing makefile ([http://code.google.com/p/latex-makefile/ GoogleCodes]) for !LaTeX. It has many features such as generating graphics from data, colorized (therefore, pretty) error output, and so on ([http://www.bouncingchairs.net/oss/latex.html more]). I slightly modified it to suit my own needs. My version can be checked out from [https://bitbucket.org/liangwang/latex-makefile bitbucket] or [https://github.com/liangwang/latex-makefile github]
+
+This makefile is so versatile that it almost suits all situations I have workes with LaTeX document. Instead of copy this makefile into each individual latex projects, I made a BASH alias to refer to one single makefile:
+{{{class="brush:bash"
+alias lmake="make --file=/PATH/TO/LATEX-MAKEFILE"
+}}}
+

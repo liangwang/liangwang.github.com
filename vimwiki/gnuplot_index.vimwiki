@@ -1,0 +1,13 @@
+%title Gnuplot
+%toc
+= Gnuplot =
+== Tips ==
+* Change style of contour lines
+{{{gnuplot"
+set style line 2 lw 2 lc 1
+set style line 3 lw 2 lc 2
+set style line 4 lw 2 lc 3
+set style increment user
+}}}
+  see ` set style increment ` in manual
+

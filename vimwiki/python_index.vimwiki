@@ -1,0 +1,18 @@
+%title Python
+%toc
+= Python =
+== Tips ==
+* String formating with zero padding for numeric values
+{{{python
+>>> index=4
+>>> str = 'padding with one 0: %02d, padding with two 0s: %03d' % (index, index)
+>>> str
+padding with one 0: 04, padding with two 0s: 004
+}}}
+
+* A code segment to test syntax highlighter
+{{{class="brush:python"
+class A:
+    def __init__(self):
+        pass
+}}}
