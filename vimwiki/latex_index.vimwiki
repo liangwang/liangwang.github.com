@@ -7,6 +7,68 @@
 gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite \
    -sOutputFile=merged.pdf f1.pdf f2.pdf ...
 }}}
+* Add wide float (figures, tables, etc.) into latex with `\makebox`
+{{{class="brush:latex"
+\begin{figure}
+\centering
+\makebox[\textwidth]{%
+\subfloat[sub title1]{
+  \label{fig:subfig1}
+  \includegraphics[\width=0.6\textwidth]{subfig1}}
+\subfloat[sub title2]{
+  \label{fig:subfig2}
+  \includegraphics[\width=0.6\textwidth]{subfig2}}
+}
+\end{figure}
+}}}
+However, `\makebox` is not sensitive to line break, that is to say if the
+above code is directly extended to a grid of subfigures (2x2 for example) as
+follow:
+{{{class="brush: latex"
+\begin{figure}
+\centering
+\makebox[\textwidth]{%
+\subfloat[sub title1]{
+  \label{fig:subfig1}
+  \includegraphics[\width=0.6\textwidth]{subfig1}}
+\subfloat[sub title2]{
+  \label{fig:subfig2}
+  \includegraphics[\width=0.6\textwidth]{subfig2}} \\
+\subfloat[sub title3]{
+  \label{fig:subfig3}
+  \includegraphics[\width=0.6\textwidth]{subfig3}}
+\subfloat[sub title4]{
+  \label{fig:subfig4}
+  \includegraphics[\width=0.6\textwidth]{subfig4}} 
+}
+\end{figure}
+}}}
+Pay attention to `\\` at the end of second subfloat. Latex will just report
+error for this code. Instead, we should use separate `mbox` for each "line" of
+subfigures, so the right code is:
+{{{class="brush: latex"
+\begin{figure}
+\centering
+%mbox for the first row of subfigures
+\makebox[\textwidth]{%
+\subfloat[sub title1]{
+  \label{fig:subfig1}
+  \includegraphics[\width=0.6\textwidth]{subfig1}}
+\subfloat[sub title2]{
+  \label{fig:subfig2}
+  \includegraphics[\width=0.6\textwidth]{subfig2}} }\\
+%mbox for the second row of subfigures
+\makebox[\textwidth]{%
+\subfloat[sub title3]{
+  \label{fig:subfig3}
+  \includegraphics[\width=0.6\textwidth]{subfig3}}
+\subfloat[sub title4]{
+  \label{fig:subfig4}
+  \includegraphics[\width=0.6\textwidth]{subfig4}} 
+}
+\end{figure}
+}}}
+
 == Tools ==
 * [[vim_latex|Vim]]
 * [[latex_makefile|Makefile]]
