@@ -13,7 +13,7 @@
 == Tips ==
 TBD
 == Plugins ==
-* vim-addon-manager : Addon manager for Vim
+* [[vam|vim-addon-manager]] : Addon manager for Vim
 * Zenburn : A 256color theme used in terminal
 * vcscommand : Work with version control systems (e.g. hg)
 * !ManPageView : Type 'K', read manpage within Vim.
