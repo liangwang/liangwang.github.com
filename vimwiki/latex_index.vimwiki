@@ -68,6 +68,29 @@ subfigures, so the right code is:
 }
 \end{figure}
 }}}
+* Macro with `\newcommand`
+{{{latex
+\newcommand{cmd}[args]{def}
+\renewcommand{cmd}[args]{def}
+}}}
+These commands define (or redefine) a command.
+
+`cmd`
+
+A command name beginning with a `\`. For `\newcommand` it must not be already defined and must not begin with `\end`; for `\renewcommand` it must already be defined.
+
+`args`
+
+An integer from 1 to 9 denoting the number of arguments of the command being defined. The default is for the command to have no arguments.
+
+`def`
+
+The text to be substituted for every occurrence of `cmd`; a parameter of the form `#n` in `cmd` is replaced by the text of the nth argument when this substitution takes place.
+* Tables
+ctable package [[http://www.ctan.org/pkg/ctable]]
+
+Tables in LaTEX2e: Packages and Methods.
+[[http://www.tug.org/pracjourn/2007-1/mori/mori.pdf|origin]] [[local/mori.pdf|mirror]]
 
 == Tools ==
 * [[vim_latex|Vim]]

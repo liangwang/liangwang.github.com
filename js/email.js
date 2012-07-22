@@ -27,7 +27,7 @@ function change() {
       address = address.replace(begin, '');
       address = address.replace(end, '');
       address = address.replace(space, '.');
-      address += '@cs.vir';
+      address += '@vir';
       address += 'ginia.e';
       address += 'du';
 

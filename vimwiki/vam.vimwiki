@@ -1,5 +1,5 @@
 %title Vim Addon Manger
 %toc
-= Vim Addon Manger =
+= Vim Addon Manger (VAM) =
 
-Not to be confused by a Debian package with the same name (at [[http://packages.debian.org/sid/vim-addon-manager|here]]), this is a vim plugin (or addon) written in vim script, hosted at [[https://github.com/MarcWeber/vim-addon-manager|Github]] or [[http://www.vim.org/scripts/script.php?script_id=2905|Vimscript]].
+Not to be confused by a Debian package with the same name (at [[http://packages.debian.org/sid/vim-addon-manager|here]]), this is a vim plugin (or addon) written in vim script, hosted at [[https://github.com/MarcWeber/vim-addon-manager|Github]] or [[http://www.vim.org/scripts/script.php?script_id=2905|Vimscript]]. It installs, updates, organizes all kinds of vim plugins (or addons) in a easy and clean way. There are a couple of alternatives to manage vim scripts, such as [[https://github.com/tpope/vim-pathogen][Pathogen]], [[https://github.com/gmarik/vundle][Vundle]], GetLatestScripts. VAM's document actually has comparisons for those alternative tools (`:help VAM-comparison`).

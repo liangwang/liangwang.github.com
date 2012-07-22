@@ -1,44 +1,66 @@
 %title Vim
 %toc
 = Vim =
+== Why ==
+Try to figure out why choose VIM over Gnu Emacs.
+
 == Cheat Sheet ==
 * Cheat Sheet 1    
   [[http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html][link]]
 * Cheat Sheet 2
   [[http://jrmiii.com/2009/03/06/learning-vim-the-pragmatic-way.html][link]]
 * Cheat Sheet 3
-  [http://michael.peopleofhonoronly.com/vim/ link]
+  [[http://michael.peopleofhonoronly.com/vim/][link]]
 * Reference Card
   [[http://tnerual.eriogerg.free.fr/vim.html][link]]
 == Tips ==
-TBD
+* Change the location of .swp file by modifing `directory`
+{{{vim
+set directory=$HOME/.vim/swapfiles//
+}}}
+The last two "//" is essential to let the name of swap file include the full path. It can solve the naming confliction of files with the same name but different directories. 
+
+
 == Plugins ==
-* [[vam|vim-addon-manager]] : Addon manager for Vim
-* Zenburn : A 256color theme used in terminal
-* vcscommand : Work with version control systems (e.g. hg)
-* !ManPageView : Type 'K', read manpage within Vim.
-* snipMate : Automation with various code insertions.
-* !OmniCppComplete : Omni-completion for c++
-* vim-latex : A.K.A !LatexSuite
-* The_NERD_tree : File explorer
-* The_NERD_Commenter : Making comment easier and faster
-* bufexplorer.zip : Switching among buffers
-* VHDL_indent_93_syntax : Syntax file for VHDL'93
-* scons : Syntax file
-* indentpython974 : Vim script #974, indent for python
-* python790 : A better python syntax file.
-* Efficient_python_folding : Python folding
-* python30 : ?
-* Pydiction : Python keywords for fast completion.
-* vimwiki : Personal wiki system in text file
-* calendar52 : Calendar
-* LaTeX_Help : Display help information for latex keywords in Vim's help system
-* Latex_Text_Formatter : Format text in latex
-* Align294 : Align text/code
-* !DrawIt : Ascii art tool
-* VOoM_-_Vim_Outliner_of_Markers : Outline mode
-* matchit.zip : ?
-* repeat : ?
-* surround : ?
-* supertab : Completion with Tab
-* taglist : Source code browser
+* Addon management
+  * [[vam|vim-addon-manager]] : Addon manager for Vim
+* General
+  * The_NERD_tree : File explorer
+  * bufexplorer.zip : Switching among buffers
+  * Align294 : Align text/code
+  * DrawIt : Ascii art tool
+  * VOoM_-_Vim_Outliner_of_Markers : Outline mode
+  * matchit.zip : ?
+  * repeat : ?
+  * surround : ?
+  * supertab : Completion with Tab
+* Color theme
+  * Zenburn : A 256color theme used in terminal
+* Python
+  * indentpython974 : Vim script #974, indent for python
+  * python790 : A better python syntax file.
+  * Efficient_python_folding : Python folding
+  * python30 : ?
+  * Pydiction : Python keywords for fast completion.
+* C/C++
+  * OmniCppComplete : Omni-completion for c++
+* LaTeX
+  * vim-latex : A.K.A !LatexSuite
+  * LaTeX_Help : Display help information for latex keywords in Vim's help system
+  * Latex_Text_Formatter : Format text in latex
+* Other languages
+  * VHDL_indent_93_syntax : Syntax file for VHDL'93
+  * scons : Syntax file
+* Misc. for programming
+  * vcscommand : Work with version control systems (e.g. hg)
+  * ManPageView : Type 'K', read manpage within Vim.
+  * The_NERD_Commenter : Making comment easier and faster
+  * taglist : Source code browser
+  * Conque_Shell: A shell emulator in Vim
+* Snippets
+  * snipMate : Automation with various code insertions. (currently used)
+  * UltiSnips : More advanced, but have conflict <C-j> key mappings with vim-latex. (diabled)
+  * xptemplate: Another alterantive, haven't tried yet
+* Markups
+  * vimwiki : Personal wiki system in plain text
+  * calendar52 : Calendar
