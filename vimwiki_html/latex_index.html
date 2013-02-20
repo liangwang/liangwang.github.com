@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="image/x-icon" rel="shortcut icon" href="favicon_blue.ico" />
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushPython.js"></script>
+<script type="text/javascript" src="js/shBrushBash.js"></script>
+<script type="text/javascript" src="js/shBrushCpp.js"></script>
+<script type="text/javascript" src="js/shBrushLatex.js"></script>
+<!-- Got from https://github.com/nelstrom/SyntaxHighlighter/blob/master/scripts/shBrushVimscript.js -->
+<script type="text/javascript" src="js/shBrushVimscript.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="styles/shCore.css" />
+<link rel="stylesheet" type="text/css" href="styles/shThemeEclipse.css" />
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['toolbar'] = false
+    SyntaxHighlighter.defaults['tab-size'] = 2
+    SyntaxHighlighter.all();
+</script>
+<title>LaTeX</title>
+<!-- Google Analytics -->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-9711742-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+</script>
+</head>
+<body>
+<div id="wrapper">
+<div id="share">
+<!-- FIXME: Google +1 can not be clicked -->
+<!--<container><div class="g-plusone" data-size="medium"></div>-->
+<script type="text/javascript">
+  (function() {
+   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+   po.src = 'https://apis.google.com/js/plusone.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+   })();
+</script>
+<div class="g-plusone" data-size="medium"></div>
+<!-- FIXME: facebook button is not vertically aligned with the other two -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+</div>
+<header>
+<nav>
+    <ul>
+        <li class="first"><a href="http://www.cs.virginia.edu/~lw2aw" title="Home">Homepage</a></li>
+        <li class="actived"><a href="http://www.cs.virginia.edu/~lw2aw/vimwiki_html/" title="Wiki">Wiki Home</a></li>
+    </ul>
+</nav>
+</header>
+<article>
+
+<div class="toc">
+<ul>
+<li><a href="#toc_1">LaTeX</a>
+<ul>
+<li><a href="#toc_1.1">Tips</a>
+<li><a href="#toc_1.2">Tools</a>
+<li><a href="#toc_1.3">Packages</a>
+</ul>
+</ul>
+</div>
+<h1 id="toc_1">LaTeX</h1>
+<h2 id="toc_1.1">Tips</h2>
+<ul>
+<li>
+Merge PDF files (*nix)
+<pre class="brush: bash">
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite \
+   -sOutputFile=merged.pdf f1.pdf f2.pdf ...
+</pre>
+
+<li>
+Add wide float (figures, tables, etc.) into latex with <code>\makebox</code>
+<pre class="brush:latex">
+\begin{figure}
+\centering
+\makebox[\textwidth]{%
+\subfloat[sub title1]{
+  \label{fig:subfig1}
+  \includegraphics[\width=0.6\textwidth]{subfig1}}
+\subfloat[sub title2]{
+  \label{fig:subfig2}
+  \includegraphics[\width=0.6\textwidth]{subfig2}}
+}
+\end{figure}
+</pre>
+
+</ul>
+<p>
+However, <code>\makebox</code> is not sensitive to line break, that is to say if the
+above code is directly extended to a grid of subfigures (2x2 for example) as
+follow:
+</p>
+<pre class="brush: latex">
+\begin{figure}
+\centering
+\makebox[\textwidth]{%
+\subfloat[sub title1]{
+  \label{fig:subfig1}
+  \includegraphics[\width=0.6\textwidth]{subfig1}}
+\subfloat[sub title2]{
+  \label{fig:subfig2}
+  \includegraphics[\width=0.6\textwidth]{subfig2}} \\
+\subfloat[sub title3]{
+  \label{fig:subfig3}
+  \includegraphics[\width=0.6\textwidth]{subfig3}}
+\subfloat[sub title4]{
+  \label{fig:subfig4}
+  \includegraphics[\width=0.6\textwidth]{subfig4}} 
+}
+\end{figure}
+</pre>
+<p>
+Pay attention to <code>\\</code> at the end of second subfloat. Latex will just report
+error for this code. Instead, we should use separate <code>mbox</code> for each "line" of
+subfigures, so the right code is:
+</p>
+<pre class="brush: latex">
+\begin{figure}
+\centering
+%mbox for the first row of subfigures
+\makebox[\textwidth]{%
+\subfloat[sub title1]{
+  \label{fig:subfig1}
+  \includegraphics[\width=0.6\textwidth]{subfig1}}
+\subfloat[sub title2]{
+  \label{fig:subfig2}
+  \includegraphics[\width=0.6\textwidth]{subfig2}} }\\
+%mbox for the second row of subfigures
+\makebox[\textwidth]{%
+\subfloat[sub title3]{
+  \label{fig:subfig3}
+  \includegraphics[\width=0.6\textwidth]{subfig3}}
+\subfloat[sub title4]{
+  \label{fig:subfig4}
+  \includegraphics[\width=0.6\textwidth]{subfig4}} 
+}
+\end{figure}
+</pre>
+<ul>
+<li>
+Macro with <code>\newcommand</code>
+<pre latex>
+\newcommand{cmd}[args]{def}
+\renewcommand{cmd}[args]{def}
+</pre>
+
+</ul>
+<p>
+These commands define (or redefine) a command.
+</p>
+
+<p>
+<code>cmd</code>
+</p>
+
+<p>
+A command name beginning with a <code>\</code>. For <code>\newcommand</code> it must not be already defined and must not begin with <code>\end</code>; for <code>\renewcommand</code> it must already be defined.
+</p>
+
+<p>
+<code>args</code>
+</p>
+
+<p>
+An integer from 1 to 9 denoting the number of arguments of the command being defined. The default is for the command to have no arguments.
+</p>
+
+<p>
+<code>def</code>
+</p>
+
+<p>
+The text to be substituted for every occurrence of <code>cmd</code>; a parameter of the form <code>#n</code> in <code>cmd</code> is replaced by the text of the nth argument when this substitution takes place.
+</p>
+<ul>
+<li>
+Tables
+
+</ul>
+<p>
+ctable package <a href="http_//www.ctan.org/pkg/ctable.html">http://www.ctan.org/pkg/ctable</a>
+</p>
+
+<p>
+Tables in LaTEX2e: Packages and Methods.
+<a href="http://www.tug.org/pracjourn/2007-1/mori/mori.pdf">origin</a> <a href="local/mori.pdf">mirror</a>
+</p>
+
+<h2 id="toc_1.2">Tools</h2>
+<ul>
+<li>
+<a href="vim_latex.html">Vim</a>
+
+<li>
+<a href="latex_makefile.html">Makefile</a>
+
+</ul>
+<h2 id="toc_1.3">Packages</h2>
+<ul>
+<li>
+fullpage
+
+</ul>
+
+</article>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'lwang620'; // required: replace example with your forum shortname
+var disqus_identifier= 'wiki'+window.location.pathname;
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+ var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+ dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<footer>
+    <a href="index.html" id="back-home">&lsaquo; Wiki Home</a>
+    Copyleft © 2010-2011, Driven by <a href="http://code.google.com/p/vimwiki/">Vimwiki</a>.
+    <p>Last Updated at 2012-04-08 22:06:34</p>
+</footer>
+</div>
+</body>
+</html>
