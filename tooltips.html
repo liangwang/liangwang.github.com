@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Misc. Tool Tips</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="title" content="Misc. Tool Tips"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-02-20"/>
+<meta name="author" content="Liang Wang"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="orgexport.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Misc. Tool Tips</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">LaTeX</a></li>
+<li><a href="#sec-2">Binutils</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">LaTeX</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>Merge PDF files (*nix)
+
+
+
+<pre class="src src-sh">gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite <span style="color: #b58900; font-weight: bold;">\</span>
+   -sOutputFile=merged.pdf f1.pdf f2.pdf ...
+</pre>
+
+</li>
+<li>Add wide floats (figures, tables, etc.) into latex with \makebox
+
+
+
+<pre class="src src-latex"><span style="color: #859900; font-weight: bold;">\begin</span>{<span style="color: #268bd2;">figure</span>}
+  <span style="color: #859900; font-weight: bold;">\centering</span>
+<span style="color: #696969;">\makebox</span>[<span style="color: #696969;">\textwidth</span>]{<span style="color: #93a1a1;">%</span>
+  <span style="color: #696969;">\subfloat</span>[sub title1]{
+    <span style="color: #859900; font-weight: bold;">\label</span>{<span style="color: #268bd2; font-weight: bold;">fig:subfig1</span>}
+    <span style="color: #696969;">\includegraphics</span>[<span style="color: #696969;">\width</span>=0.6<span style="color: #696969;">\textwidth</span>]{subfig1}}
+  <span style="color: #696969;">\subfloat</span>[sub title2]{
+    <span style="color: #859900; font-weight: bold;">\label</span>{<span style="color: #268bd2; font-weight: bold;">fig:subfig2</span>}
+    <span style="color: #696969;">\includegraphics</span>[<span style="color: #696969;">\width</span>=0.6<span style="color: #696969;">\textwidth</span>]{subfig2}}
+}
+<span style="color: #859900; font-weight: bold;">\end</span>{<span style="color: #268bd2;">figure</span>}
+</pre>
+
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Binutils</h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li>Find files with restrictions
+
+
+
+<pre class="src src-sh">find . -path <span style="color: #2aa198;">'./.*'</span> -prune -o -perm 700 -type f ! -name <span style="color: #2aa198;">\*</span>.py ! -name <span style="color: #2aa198;">\*</span>.pyc -print
+</pre>
+
+<ul>
+<li>-prune is used to exclude some of the path, such as .hg, .svn,
+    etc.
+</li>
+<li>! is logical NOT on the following statement.
+</li>
+<li>The last -print is essential, unless find will print the name of
+    excluded directory (.hg for example). Referred to "Common Gotcha"
+    section of <a href="http://content.hccfl.edu/pollock/unix/findcmd.htm">this</a> for more detailed explanation.
+
+</li>
+</ul>
+
+</li>
+<li>Copy files according to "find" results.
+  There are several ways to do this:
+<ul>
+<li>Use -exec option of find, but may have performance issue if the
+    number of resulting files is large.
+
+
+
+<pre class="src src-sh">find . -name <span style="color: #2aa198;">"test"</span> -exec cp <span style="color: #2aa198;">"{}"</span> /dest/directory <span style="color: #2aa198;">\;</span>
+</pre>
+
+</li>
+<li>Bridge find and cp with xargs, no potential performance issue.
+
+
+
+<pre class="src src-sh">find . -name <span style="color: #2aa198;">"test"</span> -print0 | xargs -0 -I{} cp <span style="color: #2aa198;">"{}"</span> /dest/directory
+</pre>
+
+</li>
+<li>A little variant to the last approach, only works with GNU cp
+
+
+
+<pre class="src src-sh">find . -name <span style="color: #2aa198;">"test"</span> -print0 | xargs -0 cp -t /dest/directory
+</pre>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="postamble">Last Updated: 2013-02-20, by Liang Wang</p><p class="postamble">Created by <a href="http://orgmode.org">Org</a> version 7.9.3e with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24
+</div>
+</body>
+</html>
