@@ -1,6 +1,0 @@
-syntax: glob
-wiki
-examples
-vimwiki_html/*.html
-_test
-*
